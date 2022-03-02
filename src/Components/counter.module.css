@@ -1,0 +1,59 @@
+.counterContainer {
+    width: 400px;
+    height: 600px;
+    background-color: rgba(154, 208, 219, 0.3);;
+    border-radius: 10px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    color: #f1d8c7;
+    font-size: 120px;
+    margin-bottom: 20px;
+}
+
+.buttonsContainer {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.buttonsContainer button {
+    width: 100px;
+    background-color:#78b0c7;
+    color: #f1d8c7;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.resetBtnContainer {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.resetBtnContainer button{
+    background-color:#78b0c7;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    color: #f1d8c7;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}

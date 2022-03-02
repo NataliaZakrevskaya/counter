@@ -1,11 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import s from "./counter.module.css"
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "../BLL/store";
+import {decCount, incCount, resCount} from "../BLL/counter-reducer";
 
 export const Counter = () => {
 
-    const [count, setCount] = useState<number>(0)
+    const count = useSelector<AppRootStateType, number>(state => state.counter.value)
+    const dispatch = useDispatch()
 
-    useEffect( () => {
+    //const [count, setCount] = useState<number>(0)
+
+    /*useEffect( () => {
         let valueAsString = localStorage.getItem('counterValue')
         if (valueAsString) {
             let valueAsNumber = JSON.parse(valueAsString)
@@ -15,18 +21,19 @@ export const Counter = () => {
 
     useEffect( () => {
         localStorage.setItem('counterValue', JSON.stringify(count))
-    }, [count] )
+    }, [count] )*/
 
 
 
     const incrementCount = () => {
-        setCount(count + 1)
+        dispatch(incCount())
     }
     const decrementCount = () => {
-        setCount(count - 1)
+        dispatch(decCount())
     }
     const resetCount = () => {
-        setCount(0)
+        debugger
+        dispatch(resCount())
     }
 
     return (

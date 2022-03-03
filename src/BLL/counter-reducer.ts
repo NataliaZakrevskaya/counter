@@ -15,12 +15,13 @@ export const counterReducer = (state: InitialStateType = initialState, action: c
         case DECREMENT_COUNT:
             return {...state, value: state.value - 1}
         case RESET_COUNT:
-            debugger
             return {...state, value: 0}
         default:
             return state
     }
 }
+
+
 // ACTIONS
 export const incCount = () => {
     return {type: INCREMENT_COUNT} as const
@@ -34,7 +35,7 @@ export const resCount = () => {
 
 // TYPES
 type InitialStateType = typeof initialState
-type incCountType = ReturnType<typeof incCount>
-type decCountType = ReturnType<typeof decCount>
-type resCountType = ReturnType<typeof resCount>
-type counterReducerType = incCountType | decCountType | resCountType
+type IncCountType = ReturnType<typeof incCount>
+type DecCountType = ReturnType<typeof decCount>
+type ResCountType = ReturnType<typeof resCount>
+type counterReducerType = IncCountType | DecCountType | ResCountType
